@@ -33,9 +33,7 @@ function InfiniteScroll( element, options ) {
   element = queryElem;
   // do not initialize twice on same element
   if ( element.infiniteScrollGUID ) {
-    let instance = instances[ element.infiniteScrollGUID ];
-    instance.option( options );
-    return instance;
+    return (instances[ element.infiniteScrollGUID ].option(options));
   }
 
   this.element = element;
